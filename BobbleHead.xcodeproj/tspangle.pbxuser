@@ -1,5 +1,19 @@
 // !$*UTF8*$!
 {
+	1D3623240D0F684500981E51 /* AppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {605, 337}}";
+			sepNavSelRange = "{7, 0}";
+			sepNavVisRange = "{0, 313}";
+		};
+	};
+	1D3623250D0F684500981E51 /* AppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 988}}";
+			sepNavSelRange = "{1061, 0}";
+			sepNavVisRange = "{202, 912}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* BobbleHead */ = {
 		activeExec = 0;
 		executables = (
@@ -20,7 +34,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					491,
+					427,
 					20,
 					48.16259765625,
 					43,
@@ -39,6 +53,11 @@
 			};
 			PBXPerProjectTemplateStateSaveDate = 316588749;
 			PBXWorkspaceStateSaveDate = 316588749;
+		};
+		perUserProjectItems = {
+			5386AB9712DEC44800423232 /* PBXTextBookmark */ = 5386AB9712DEC44800423232 /* PBXTextBookmark */;
+			5386AB9812DEC44800423232 /* PBXTextBookmark */ = 5386AB9812DEC44800423232 /* PBXTextBookmark */;
+			5386AB9912DEC44800423232 /* PBXTextBookmark */ = 5386AB9912DEC44800423232 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 5386AB8E12DEC2D500423232 /* Source Control */;
 		userBuildSettings = {
@@ -84,5 +103,35 @@
 	5386AB8F12DEC2D500423232 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	5386AB9712DEC44800423232 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* AppDelegate.h */;
+		name = "AppDelegate.h: 2";
+		rLen = 0;
+		rLoc = 7;
+		rType = 0;
+		vrLen = 313;
+		vrLoc = 0;
+	};
+	5386AB9812DEC44800423232 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* AppDelegate.m */;
+		name = "AppDelegate.m: 11";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 527;
+		vrLoc = 0;
+	};
+	5386AB9912DEC44800423232 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* AppDelegate.m */;
+		name = "AppDelegate.m: 37";
+		rLen = 0;
+		rLoc = 1061;
+		rType = 0;
+		vrLen = 912;
+		vrLoc = 202;
 	};
 }

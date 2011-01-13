@@ -1,5 +1,5 @@
 //
-//  BobbleHeadAppDelegate.h
+//  AppDelegate.h
 //  BobbleHead
 //
 //  Created by Travis Spangle on 1/12/11.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BobbleHeadAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 }
 

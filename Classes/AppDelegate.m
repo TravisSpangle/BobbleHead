@@ -6,9 +6,9 @@
 //  Copyright 2011 Peak Systems. All rights reserved.
 //
 
-#import "BobbleHeadAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation BobbleHeadAppDelegate
+@implementation AppDelegate
 
 @synthesize window;
 
