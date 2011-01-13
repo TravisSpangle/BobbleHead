@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BobbleHeadViewController.h"
 
 @implementation AppDelegate
 
@@ -17,9 +18,7 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after application launch.
-    
+	self.window.rootViewController = [[[BobbleHeadViewController alloc] init] autorelease];    
     [self.window makeKeyAndVisible];
     
     return YES;
