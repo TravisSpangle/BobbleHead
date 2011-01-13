@@ -10,8 +10,8 @@
 	1D3623250D0F684500981E51 /* AppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1965, 988}}";
-			sepNavSelRange = "{570, 0}";
-			sepNavVisRange = "{0, 1508}";
+			sepNavSelRange = "{250, 0}";
+			sepNavVisRange = "{0, 1379}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* BobbleHead */ = {
@@ -131,6 +131,8 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = BobbleHead;
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
@@ -181,9 +183,16 @@
 	};
 	5386AB9E12DEC7C100423232 /* BobbleHeadViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {605, 337}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 244}";
+			sepNavIntBoundsRect = "{{0, 0}, {747, 508}}";
+			sepNavSelRange = "{259, 0}";
+			sepNavVisRange = "{0, 270}";
+		};
+	};
+	5386AB9F12DEC7C100423232 /* BobbleHeadViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1287}}";
+			sepNavSelRange = "{684, 0}";
+			sepNavVisRange = "{189, 1040}";
 		};
 	};
 	5386ABA512DEC7D600423232 /* PBXTextBookmark */ = {
@@ -208,7 +217,7 @@
 		isa = PBXTextBookmark;
 		fRef = 5386AB9E12DEC7C100423232 /* BobbleHeadViewController.h */;
 		rLen = 0;
-		rLoc = 9223372036854775808;
+		rLoc = 270;
 		rType = 0;
 	};
 	5386ABA912DEC7D600423232 /* PBXTextBookmark */ = {
