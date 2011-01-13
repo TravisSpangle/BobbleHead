@@ -14,6 +14,7 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		5386AB9B12DEC4AF00423232 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5386AB9A12DEC4AF00423232 /* Background.png */; };
+		5386AB9D12DEC77800423232 /* MeHeadAndPipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5386AB9C12DEC77800423232 /* MeHeadAndPipe.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* BobbleHead_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobbleHead_Prefix.pch; sourceTree = "<group>"; };
 		5386AB9A12DEC4AF00423232 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		5386AB9C12DEC77800423232 /* MeHeadAndPipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeHeadAndPipe.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BobbleHead-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BobbleHead-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 		5386AB9612DEC43F00423232 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5386AB9C12DEC77800423232 /* MeHeadAndPipe.png */,
 				5386AB9A12DEC4AF00423232 /* Background.png */,
 			);
 			name = Images;
@@ -169,6 +172,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				5386AB9B12DEC4AF00423232 /* Background.png in Resources */,
+				5386AB9D12DEC77800423232 /* MeHeadAndPipe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
