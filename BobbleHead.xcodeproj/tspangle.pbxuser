@@ -61,6 +61,11 @@
 			5386AB9712DEC44800423232 /* PBXTextBookmark */ = 5386AB9712DEC44800423232 /* PBXTextBookmark */;
 			5386AB9812DEC44800423232 /* PBXTextBookmark */ = 5386AB9812DEC44800423232 /* PBXTextBookmark */;
 			5386AB9912DEC44800423232 /* PBXTextBookmark */ = 5386AB9912DEC44800423232 /* PBXTextBookmark */;
+			5386ABA512DEC7D600423232 /* PBXTextBookmark */ = 5386ABA512DEC7D600423232 /* PBXTextBookmark */;
+			5386ABA612DEC7D600423232 /* PBXBookmark */ = 5386ABA612DEC7D600423232 /* PBXBookmark */;
+			5386ABA712DEC7D600423232 /* PBXBookmark */ = 5386ABA712DEC7D600423232 /* PBXBookmark */;
+			5386ABA812DEC7D600423232 /* PBXTextBookmark */ = 5386ABA812DEC7D600423232 /* PBXTextBookmark */;
+			5386ABA912DEC7D600423232 /* PBXTextBookmark */ = 5386ABA912DEC7D600423232 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 5386AB8E12DEC2D500423232 /* Source Control */;
 		userBuildSettings = {
@@ -136,5 +141,47 @@
 		rType = 0;
 		vrLen = 912;
 		vrLoc = 202;
+	};
+	5386AB9E12DEC7C100423232 /* BobbleHeadViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {605, 337}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 244}";
+		};
+	};
+	5386ABA512DEC7D600423232 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* AppDelegate.m */;
+		name = "AppDelegate.m: 37";
+		rLen = 0;
+		rLoc = 1061;
+		rType = 0;
+		vrLen = 912;
+		vrLoc = 202;
+	};
+	5386ABA612DEC7D600423232 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 5386AB9A12DEC4AF00423232 /* Background.png */;
+	};
+	5386ABA712DEC7D600423232 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 5386AB9C12DEC77800423232 /* MeHeadAndPipe.png */;
+	};
+	5386ABA812DEC7D600423232 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5386AB9E12DEC7C100423232 /* BobbleHeadViewController.h */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	5386ABA912DEC7D600423232 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5386AB9E12DEC7C100423232 /* BobbleHeadViewController.h */;
+		name = "BobbleHeadViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 244;
+		vrLoc = 0;
 	};
 }
