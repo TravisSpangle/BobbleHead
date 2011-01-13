@@ -1,5 +1,5 @@
 //
-//  BobbleHeadAppDelegate.m
+//  AppDelegate.m
 //  BobbleHead
 //
 //  Created by Travis Spangle on 1/12/11.
