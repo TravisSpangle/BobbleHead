@@ -24,6 +24,9 @@
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 5386AB7F12DEC2CC00423232 /* BobbleHead */;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* BobbleHead */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* BobbleHead */,
+		);
 		codeSenseManager = 5386AB8F12DEC2D500423232 /* Code sense */;
 		executables = (
 			5386AB7F12DEC2CC00423232 /* BobbleHead */,
