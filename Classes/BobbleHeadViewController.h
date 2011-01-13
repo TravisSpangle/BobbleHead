@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BobbleHeadViewController : UIViewController {
+@interface BobbleHeadViewController : UIViewController  <UIAccelerometerDelegate>{
 
 }
 
