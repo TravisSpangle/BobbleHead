@@ -10,7 +10,11 @@
 
 
 @interface BobbleHeadViewController : UIViewController  <UIAccelerometerDelegate>{
+	IBOutlet UIImageView *headToBobble;
+	IBOutlet UIView *headSpace;
 
 }
+@property(nonatomic, retain) IBOutlet UIImageView *headToBobble;
+@property(nonatomic, retain) IBOutlet UIView *headSpace;
 
 @end

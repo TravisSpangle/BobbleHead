@@ -8,9 +8,9 @@
 
 #import "BobbleHeadViewController.h"
 
-
 @implementation BobbleHeadViewController
 
+@synthesize headToBobble, headSpace;
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -19,7 +19,7 @@
 	NSLog(@"Monitoring accelerometer");
 	UIAccelerometer *a = [UIAccelerometer sharedAccelerometer];
 	// Receive updates every 1/10th of a second
-	[a setUpdateInterval:0.1];
+	[a setUpdateInterval:0.5];
 	[a setDelegate:self];
 	
 	[[self view] becomeFirstResponder];
@@ -82,6 +82,46 @@
 - (void)accelerometer:(UIAccelerometer *)meter
 		didAccelerate:(UIAcceleration *) accel
 {
+	CGPoint origin = headSpace.center;
+	
+	NSLog(@"X: %f and Y: %f",[accel x], [accel y]);
+	
+	[UIView beginAnimations:nil context:NULL];
+	
+	CGPoint pos = headSpace.center;
+	
+	float xShift = pos.x * 0.8 + [accel x] * 2.0;
+	float yShift = pos.y * 0.8 - [accel y] * 2.0;
+
+	pos.x = xShift;
+	pos.y = yShift;
+	
+	
+	NSLog(@"\tmoving x: %f and y %f",xShift,yShift);
+	
+	headSpace.center = pos;
+	
+	[UIView commitAnimations];
+
+	//Start moving back to center
+	[UIView beginAnimations:nil context:NULL];
+	
+	pos.y = origin.y;//(yShift * -1.0);
+	pos.x = origin.x;//(xShift * -1.0);
+	NSLog(@"\tmoving back x: %f and y%f",origin.x,origin.y);
+	headSpace.center = pos;
+	
+	[UIView commitAnimations];
+	
+	
+	
+	/*
+
+	[UIView beginAnimation:nil context:NULL];
+	
+	CGPoint posix
+	 */
+	 
 	/*HypnosisView *hv = (HypnosisView *)[self view];
 	float xShift = [hv xShift] * 0.8 + [accel x] * 2.0;
 	float yShift = [hv yShift] * 0.8 - [accel y] * 2.0;
@@ -91,7 +131,6 @@
 	
 	//Redrw the view
 	[hv setNeedsDisplay];*/
-	NSLog(@"X: %f and Y: %f",[accel x], [accel y]);
 }
 
 
