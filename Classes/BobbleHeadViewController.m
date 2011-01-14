@@ -7,10 +7,12 @@
 //
 
 #import "BobbleHeadViewController.h"
+#import "BobbleHead.h"	
 
 @implementation BobbleHeadViewController
 
-@synthesize headToBobble, headSpace;
+@synthesize headSpace;
+@synthesize bHead;
 
 -(void)viewWillAppear:(BOOL)animated
 {

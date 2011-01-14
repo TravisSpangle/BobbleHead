@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class BobbleHead;
 
 @interface BobbleHeadViewController : UIViewController  <UIAccelerometerDelegate>{
-	IBOutlet UIImageView *headToBobble;
 	IBOutlet UIView *headSpace;
+	
+	BobbleHead *bHead;
 
 }
-@property(nonatomic, retain) IBOutlet UIImageView *headToBobble;
 @property(nonatomic, retain) IBOutlet UIView *headSpace;
+@property(nonatomic, retain) BobbleHead *bHead;
 
 @end
