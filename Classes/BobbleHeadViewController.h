@@ -16,7 +16,7 @@
 	BobbleHead *bHead;
 
 }
-@property(nonatomic, retain) IBOutlet UIView *headSpace;
+@property(nonatomic, assign) IBOutlet UIView *headSpace;
 @property(nonatomic, retain) BobbleHead *bHead;
 
 @end

@@ -14,14 +14,17 @@
 @synthesize headSpace;
 @synthesize bHead;
 
+
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
 	
 	NSLog(@"Monitoring accelerometer");
+	self.bHead = [[[BobbleHead alloc] init] autorelease];
+	
 	UIAccelerometer *a = [UIAccelerometer sharedAccelerometer];
-	// Receive updates every 1/10th of a second
-	[a setUpdateInterval:0.5];
+
+	[a setUpdateInterval:2];
 	[a setDelegate:self];
 	
 	[[self view] becomeFirstResponder];
@@ -51,6 +54,7 @@
     [super viewDidLoad];
 }
 */
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -84,22 +88,40 @@
 - (void)accelerometer:(UIAccelerometer *)meter
 		didAccelerate:(UIAcceleration *) accel
 {
-	CGPoint origin = headSpace.center;
 	
-	NSLog(@"X: %f and Y: %f",[accel x], [accel y]);
+	CGPoint origin = headSpace.center;
+	/*
+	//NSLog(@"X: %f and Y: %f",[accel x], [accel y]);
+	NSLog(@"-----------------");
+	NSLog(@"X: %f ",[accel x]);
+	
+	int x;
+	
+	x = accel.x * 1000.0f;
+	
+	NSLog(@"X as int %i then as float %f \n-----------------",x,x/1000.0f);
+	*/
+	
 	
 	[UIView beginAnimations:nil context:NULL];
 	
 	CGPoint pos = headSpace.center;
 	
-	float xShift = pos.x * 0.8 + [accel x] * 2.0;
-	float yShift = pos.y * 0.8 - [accel y] * 2.0;
+	[bHead getNewPoint:pos.x accelerometerData:[accel x]];
+	
+	pos.x = [bHead getNewPoint:pos.x accelerometerData:[accel x]];
+	
+	//float xShift;
+	float yShift;
+	
+	//xShift = pos.x * 0.8 + [accel x] * 2.0;
+	yShift = pos.y * 0.8 - [accel y] * 2.0;
 
-	pos.x = xShift;
+	//pos.x = xShift;
 	pos.y = yShift;
 	
 	
-	NSLog(@"\tmoving x: %f and y %f",xShift,yShift);
+	//NSLog(@"\tmoving x: %f and y %f",xShift,yShift);
 	
 	headSpace.center = pos;
 	
@@ -114,25 +136,7 @@
 	headSpace.center = pos;
 	
 	[UIView commitAnimations];
-	
-	
-	
-	/*
 
-	[UIView beginAnimation:nil context:NULL];
-	
-	CGPoint posix
-	 */
-	 
-	/*HypnosisView *hv = (HypnosisView *)[self view];
-	float xShift = [hv xShift] * 0.8 + [accel x] * 2.0;
-	float yShift = [hv yShift] * 0.8 - [accel y] * 2.0;
-	
-	[hv setXShift:xShift];
-	[hv setYShift:yShift];
-	
-	//Redrw the view
-	[hv setNeedsDisplay];*/
 }
 
 

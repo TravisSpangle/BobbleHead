@@ -10,7 +10,10 @@
 
 
 @interface BobbleHead : NSObject {
-
+	
 }
+
+- (float)getNewPoint:(float)position
+   accelerometerData:(float)accel;
 
 @end
