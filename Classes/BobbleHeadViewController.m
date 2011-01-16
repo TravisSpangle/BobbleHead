@@ -24,7 +24,7 @@
 	
 	UIAccelerometer *a = [UIAccelerometer sharedAccelerometer];
 
-	[a setUpdateInterval:2];
+	[a setUpdateInterval:.2];
 	[a setDelegate:self];
 	
 	[[self view] becomeFirstResponder];
@@ -87,54 +87,23 @@
 #pragma mark Accelerao
 - (void)accelerometer:(UIAccelerometer *)meter
 		didAccelerate:(UIAcceleration *) accel
-{
-	
-	CGPoint origin = headSpace.center;
-	/*
+{	
 	//NSLog(@"X: %f and Y: %f",[accel x], [accel y]);
-	NSLog(@"-----------------");
-	NSLog(@"X: %f ",[accel x]);
-	
-	int x;
-	
-	x = accel.x * 1000.0f;
-	
-	NSLog(@"X as int %i then as float %f \n-----------------",x,x/1000.0f);
-	*/
-	
-	
-	[UIView beginAnimations:nil context:NULL];
 	
 	CGPoint pos = headSpace.center;
 	
-	[bHead getNewPoint:pos.x accelerometerData:[accel x]];
+	[UIView beginAnimations:nil context:NULL];
 	
-	pos.x = [bHead getNewPoint:pos.x accelerometerData:[accel x]];
+	[UIView setAnimationDuration:0.1];
+	[UIView setAnimationRepeatAutoreverses:YES];
 	
-	//float xShift;
-	float yShift;
-	
-	//xShift = pos.x * 0.8 + [accel x] * 2.0;
-	yShift = pos.y * 0.8 - [accel y] * 2.0;
-
-	//pos.x = xShift;
-	pos.y = yShift;
-	
-	
-	//NSLog(@"\tmoving x: %f and y %f",xShift,yShift);
-	
-	headSpace.center = pos;
+	headSpace.center = [bHead bobbleHeadCords:pos accelerometerData:accel];
 	
 	[UIView commitAnimations];
 
 	//Start moving back to center
 	[UIView beginAnimations:nil context:NULL];
-	
-	pos.y = origin.y;//(yShift * -1.0);
-	pos.x = origin.x;//(xShift * -1.0);
-	NSLog(@"\tmoving back x: %f and y%f",origin.x,origin.y);
-	headSpace.center = pos;
-	
+		headSpace.center = pos;
 	[UIView commitAnimations];
 
 }

@@ -10,10 +10,16 @@
 
 
 @interface BobbleHead : NSObject {
-	
+	float xCord;
+	float yCord;
 }
 
-- (float)getNewPoint:(float)position
-   accelerometerData:(float)accel;
+- (CGPoint)bobbleHeadCords:(CGPoint)position
+accelerometerData:(UIAcceleration *) accel;
+
+- (BOOL)shouldIBobble:(float)accel
+		 lastPosition:(float)pos;
+
+- (float)round:(float)no;
 
 @end
