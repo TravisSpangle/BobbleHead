@@ -12,6 +12,7 @@
 
 -(id)init {
 	[super init];
+	//TODO: main appliction should be able to set this.
 	xCord = 0.00f;
 	yCord = 0.00f;
 	
@@ -23,6 +24,9 @@ accelerometerData:(UIAcceleration *) accel {
 	
 	NSLog(@"Accel X: %f Accel Y: %f", [self round:[accel x]], [self round:[accel y]]);
 	
+	//NSLog(@"Width: %f Height %f"bounds.width, bounds.height);
+	
+	//TODO: Get a better equation - and set a max value on accel to prevent bobble from going off screen
 	if ([self shouldIBobble:[accel x] lastPosition:xCord]) {
 		position.x = position.x * 0.8 + [accel x] * 2.0;
 	}
@@ -49,8 +53,8 @@ accelerometerData:(UIAcceleration *) accel {
 
 - (float)round:(float)no {
 	int asInt;
-	asInt = no * 10.0f;
-	return asInt/10.0f;
+	asInt = no * 10.0f; //make 1.0234 = 102.34.  Setting to int truncates it as 102.
+	return asInt/10.0f; //make 102 = 1.02, return.
 }
 
 @end

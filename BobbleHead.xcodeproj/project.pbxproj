@@ -18,6 +18,9 @@
 		5386AB9D12DEC77800423232 /* MeHeadAndPipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5386AB9C12DEC77800423232 /* MeHeadAndPipe.png */; };
 		5386ABA112DEC7C100423232 /* BobbleHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5386AB9F12DEC7C100423232 /* BobbleHeadViewController.m */; };
 		5386ABA212DEC7C100423232 /* BobbleHeadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5386ABA012DEC7C100423232 /* BobbleHeadViewController.xib */; };
+		53F7402E12E5542300235D55 /* Homework 2 Bobblehead.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 53F7402D12E5542300235D55 /* Homework 2 Bobblehead.pdf */; };
+		53F7405B12E55E0E00235D55 /* EagleBody.png in Resources */ = {isa = PBXBuildFile; fileRef = 53F7405A12E55E0E00235D55 /* EagleBody.png */; };
+		53F7405D12E55E1700235D55 /* spring.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53F7405C12E55E1700235D55 /* spring.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		5386AB9E12DEC7C100423232 /* BobbleHeadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BobbleHeadViewController.h; sourceTree = "<group>"; };
 		5386AB9F12DEC7C100423232 /* BobbleHeadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BobbleHeadViewController.m; sourceTree = "<group>"; };
 		5386ABA012DEC7C100423232 /* BobbleHeadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BobbleHeadViewController.xib; sourceTree = "<group>"; };
+		53F7402D12E5542300235D55 /* Homework 2 Bobblehead.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Homework 2 Bobblehead.pdf"; sourceTree = "<group>"; };
+		53F7405A12E55E0E00235D55 /* EagleBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EagleBody.png; sourceTree = "<group>"; };
+		53F7405C12E55E1700235D55 /* spring.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spring.gif; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BobbleHead-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BobbleHead-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +126,7 @@
 		5356D09712DF606A000B8B9B /* misc */ = {
 			isa = PBXGroup;
 			children = (
+				53F7402D12E5542300235D55 /* Homework 2 Bobblehead.pdf */,
 			);
 			name = misc;
 			sourceTree = "<group>";
@@ -136,6 +143,8 @@
 		5386AB9612DEC43F00423232 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				53F7405C12E55E1700235D55 /* spring.gif */,
+				53F7405A12E55E0E00235D55 /* EagleBody.png */,
 				5386AB9C12DEC77800423232 /* MeHeadAndPipe.png */,
 				5386AB9A12DEC4AF00423232 /* Background.png */,
 			);
@@ -195,6 +204,9 @@
 				5386AB9B12DEC4AF00423232 /* Background.png in Resources */,
 				5386AB9D12DEC77800423232 /* MeHeadAndPipe.png in Resources */,
 				5386ABA212DEC7C100423232 /* BobbleHeadViewController.xib in Resources */,
+				53F7402E12E5542300235D55 /* Homework 2 Bobblehead.pdf in Resources */,
+				53F7405B12E55E0E00235D55 /* EagleBody.png in Resources */,
+				53F7405D12E55E1700235D55 /* spring.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
