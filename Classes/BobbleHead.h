@@ -10,9 +10,14 @@
 
 
 @interface BobbleHead : NSObject {
-	float xCord;
-	float yCord;
+	
+	float xCord, yCord;
+	
+	float xMaxWidth;
+	float yMaxHeight;
 }
+@property(nonatomic, assign) float xCord;
+@property(nonatomic, assign) float yCord;
 
 - (CGPoint)bobbleHeadCords:(CGPoint)position
 accelerometerData:(UIAcceleration *) accel;
@@ -21,5 +26,7 @@ accelerometerData:(UIAcceleration *) accel;
 		 lastPosition:(float)pos;
 
 - (float)round:(float)no;
+- (float)keepCenterWithinBoundryCords:(float)no
+						  maxPosition:(float)maxP;
 
 @end

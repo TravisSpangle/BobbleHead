@@ -10,11 +10,16 @@
 
 @implementation BobbleHead
 
+@synthesize xCord, yCord;
+
 -(id)init {
 	[super init];
-	//TODO: main appliction should be able to set this.
-	xCord = 0.00f;
-	yCord = 0.00f;
+		
+	CGRect cgBounds = [[UIScreen mainScreen] bounds];
+	
+	NSLog(@"Setting Max Width to %f and height to %f", cgBounds.size.width, cgBounds.size.height);
+	xMaxWidth = cgBounds.size.width;
+	yMaxHeight = cgBounds.size.height;
 	
 	return self;
 }
@@ -23,16 +28,20 @@
 accelerometerData:(UIAcceleration *) accel {
 	
 	NSLog(@"Accel X: %f Accel Y: %f", [self round:[accel x]], [self round:[accel y]]);
-	
-	//NSLog(@"Width: %f Height %f"bounds.width, bounds.height);
-	
-	//TODO: Get a better equation - and set a max value on accel to prevent bobble from going off screen
+
 	if ([self shouldIBobble:[accel x] lastPosition:xCord]) {
-		position.x = position.x * 0.8 + [accel x] * 2.0;
+		//NSLog(@"Moving X Axis: %f",[accel x] * 2.0);
+		//position.x = position.x * 0.8 + [accel x] * 2.0;
+		position.x = position.x + ( position.x * ([accel x]/2));
+		
+		position.x = [self keepCenterWithinBoundryCords:position.x maxPosition:xMaxWidth];
 	}
 	
 	if ([self shouldIBobble:[accel y] lastPosition:yCord]) {
-		position.y = position.y * 0.8 - [accel y] * 2.0;
+		//position.y = position.y * 0.8 - [accel y] * 2.0;
+		position.y = position.y + ( position.y * ([accel y]/2) );
+		
+		position.y = [self keepCenterWithinBoundryCords:position.y maxPosition:yMaxHeight];
 	}
 	
 	xCord = [self round:[accel x]];
@@ -49,6 +58,17 @@ accelerometerData:(UIAcceleration *) accel {
 	}
 	
 	return YES;
+}
+
+- (float)keepCenterWithinBoundryCords:(float)no
+	maxPosition:(float)maxP {
+	if (no < 0) {
+		return 0.0f;
+	} else if (no > maxP) {
+		return maxP;
+	} 
+	
+	return no;
 }
 
 - (float)round:(float)no {

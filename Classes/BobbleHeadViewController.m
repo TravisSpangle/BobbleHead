@@ -14,18 +14,21 @@
 @synthesize headSpace;
 @synthesize bHead;
 
-
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
 	
 	NSLog(@"Monitoring accelerometer");
+
 	self.bHead = [[[BobbleHead alloc] init] autorelease];
 	
 	UIAccelerometer *a = [UIAccelerometer sharedAccelerometer];
 
-	[a setUpdateInterval:.2];
+	[a setUpdateInterval:.1];
 	[a setDelegate:self];
+	
+	[bHead setXCord:headSpace.center.x];
+	[bHead setYCord:headSpace.center.y];
 	
 	[[self view] becomeFirstResponder];
 }
@@ -82,19 +85,19 @@
     [super dealloc];
 }
 
-
 #pragma mark -
 #pragma mark Accelerao
 - (void)accelerometer:(UIAccelerometer *)meter
 		didAccelerate:(UIAcceleration *) accel
 {	
 	//NSLog(@"X: %f and Y: %f",[accel x], [accel y]);
-	
+	//NSLog(@"bounds %@",	[self view] );
+
 	CGPoint pos = headSpace.center;
 	
 	[UIView beginAnimations:nil context:NULL];
 	
-	[UIView setAnimationDuration:0.1];
+	[UIView setAnimationDuration:0.05];
 	[UIView setAnimationRepeatAutoreverses:YES];
 	
 	headSpace.center = [bHead bobbleHeadCords:pos accelerometerData:accel];
